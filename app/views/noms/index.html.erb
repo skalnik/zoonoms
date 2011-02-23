@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Animal</th>
     <th>Location</th>
     <th>Comment</th>
@@ -13,17 +12,16 @@
 
 <% @noms.each do |nom| %>
   <tr>
-    <td><%= nom.user_id %></td>
     <td><%= nom.animal_id %></td>
     <td><%= nom.location %></td>
     <td><%= nom.comment %></td>
-    <td><%= link_to 'Show', nom %></td>
-    <td><%= link_to 'Edit', edit_nom_path(nom) %></td>
-    <td><%= link_to 'Destroy', nom, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [current_user, nom] %></td>
+    <td><%= link_to 'Edit', edit_user_nom_path(current_user, nom) %></td>
+    <td><%= link_to 'Destroy', [current_user, nom], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Nom', new_nom_path %>
+<%= link_to 'New Nom', new_user_nom_path(current_user) %>

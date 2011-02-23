@@ -1,8 +1,8 @@
 class NomsController < ApplicationController
-  # GET /noms
-  # GET /noms.xml
+  before_filter :authenticate_user!
+
   def index
-    @noms = Nom.all
+    @noms = current_user.noms
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class NomsController < ApplicationController
   # GET /noms/1
   # GET /noms/1.xml
   def show
-    @nom = Nom.find(params[:id])
+    @nom = Nom.where(:user_id => current_user.id, :id => params[:id]).find(:first)
 
     respond_to do |format|
       format.html # show.html.erb
