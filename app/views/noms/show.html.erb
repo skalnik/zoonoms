@@ -16,5 +16,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_nom_path(@nom) %> |
-<%= link_to 'Back', noms_path %>
+<%= link_to 'Edit', edit_user_nom_path(current_user, @nom) %> |
+<%= link_to 'Back', user_noms_path(current_user) %>
