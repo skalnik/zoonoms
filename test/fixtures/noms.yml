@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  animal_id: 1
+  location: MyString
+  comment: MyString
+
+two:
+  user_id: 1
+  animal_id: 1
+  location: MyString
+  comment: MyString

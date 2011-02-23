@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @nom.user_id %>
+</p>
+
+<p>
+  <b>Animal:</b>
+  <%= @nom.animal_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @nom.location %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @nom.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_nom_path(@nom) %> |
+<%= link_to 'Back', noms_path %>
