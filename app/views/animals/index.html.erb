@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Title</th>
+    <th>Name</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -11,7 +11,7 @@
 
 <% @animals.each do |animal| %>
   <tr>
-    <td><%= animal.title %></td>
+    <td><%= animal.name %></td>
     <td><%= animal.description %></td>
     <td><%= link_to 'Show', animal %></td>
     <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
