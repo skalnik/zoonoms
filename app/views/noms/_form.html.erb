@@ -14,8 +14,8 @@
   <%= f.hidden_field :user_id, :value => current_user.id %>
   
   <div class="field">
-    <%= f.label :animal_id %><br />
-    <%= f.text_field :animal_id %>
+    <%= f.label :animal %><br />
+    <%= f.collection_select(:animal_id, Animal.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :location %><br />
