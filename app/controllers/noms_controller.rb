@@ -44,7 +44,7 @@ class NomsController < ApplicationController
 
     respond_to do |format|
       if @nom.save
-        format.html { redirect_to(@nom, :notice => 'Nom was successfully created.') }
+        format.html { redirect_to([current_user, @nom], :notice => 'Nom was successfully created.') }
         format.xml  { render :xml => @nom, :status => :created, :location => @nom }
       else
         format.html { render :action => "new" }
@@ -76,7 +76,7 @@ class NomsController < ApplicationController
     @nom.destroy
 
     respond_to do |format|
-      format.html { redirect_to(noms_url) }
+      format.html { redirect_to(user_noms_url(current_user)) }
       format.xml  { head :ok }
     end
   end

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @nom %> |
-<%= link_to 'Back', noms_path %>
+<%= link_to 'Show', [current_user, @nom] %> |
+<%= link_to 'Back', user_noms_path(current_user) %>
