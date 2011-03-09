@@ -2,3 +2,13 @@
 <p>
   <%= link_to 'Nommed?', new_user_nom_path(current_user) %>
 </p>
+<h2>Recent Noms</h2>
+<ul>
+  <% current_user.noms.each do |nom| %>
+    <li>
+      <%= nom.animal.name %> @
+      <%= nom.location %> |
+      <%= nom.comment %>
+    </li>
+  <% end %>
+</ul>
