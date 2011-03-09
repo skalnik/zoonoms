@@ -5,7 +5,9 @@ Zoonoms::Application.routes.draw do
     resources :noms
   end
 
-  resources :animals
+  namespace :admin do
+    resources :animals
+  end
 
   root :to => "home#index"
 end

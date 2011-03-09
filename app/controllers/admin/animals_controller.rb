@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+class Admin::AnimalsController < ApplicationController
   # GET /animals
   # GET /animals.xml
   def index
@@ -76,7 +76,7 @@ class AnimalsController < ApplicationController
     @animal.destroy
 
     respond_to do |format|
-      format.html { redirect_to(animals_url) }
+      format.html { redirect_to(admin_animals_url) }
       format.xml  { head :ok }
     end
   end
